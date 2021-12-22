@@ -1,11 +1,13 @@
 import React from 'react';
 import './reset.css';
 import './App.css';
+import { Form } from '../Components/Form/Form';
 
 function App() {
   return (
     <div className="App">
-      <h1>Profile Utilisateur</h1>
+      <h1>User Profile</h1>
+      <Form />
     </div>
   );
 }

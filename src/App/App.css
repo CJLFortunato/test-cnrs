@@ -1,0 +1,52 @@
+.App {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 90vh;
+    background-color: cadetblue;
+}
+
+.form-ctn {
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+    background-color: white;
+
+}
+.clicked-topics-ctn {
+    width: 50%;
+    height: 90%;
+    border: 1px solid dodgerblue;
+}
+.topic-btn {
+    margin: 5px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: dodgerblue;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+}
+form {
+    /* border: 2px solid red; */
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0;
+}
+select {
+    width: 50%;
+    margin: 20px;
+    height: 30rem;
+}
+option {
+    font-size: 1.2rem;
+}
+option:hover {
+    background-color: lightblue;
+}
