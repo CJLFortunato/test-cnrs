@@ -23,13 +23,19 @@
     border: 1px solid dodgerblue;
 }
 .topic-btn {
-    margin: 5px;
-    font-size: 1.3rem;
     color: white;
     background-color: dodgerblue;
-    padding: 1%;
+}
+.btn {
+    margin: 5px;
+    font-size: 1.3rem; 
+    padding: 10px;
     border: none;
     border-radius: 5px;
+}
+.saved-btn {
+    color: white;
+    background-color: teal;
 }
 form {
     /* border: 2px solid red; */
@@ -49,4 +55,10 @@ option {
 }
 option:hover {
     background-color: lightblue;
+}
+
+.savedTopics {
+    border: 1px solid red;
+    width: 80%;
+    background-color: white;
 }
