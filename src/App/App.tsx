@@ -4,6 +4,7 @@ import './reset.css';
 import './App.css';
 import { Form } from '../Components/Form/Form';
 import { SavedTopics } from '../Components/SavedTopics/SavedTopics';
+import { SaveButton } from '../Components/SaveButton/SaveButton';
 
 function App() {
   
@@ -17,13 +18,13 @@ function App() {
         const apiCall = async () => {
             const res = await fetch('http://localhost:5000/topics');
             const data = await res.json();
-            setTopics(data);
+            setTopics(data.filter((topic: string) => !savedTopics.includes(topic))); //Filters the topics the user has already saved out of the list.  
         };
         apiCall();
-    }, []);
+    }, [savedTopics]); // reloads everytime the Patch API call changes the saved topics, so the new ones can be filtered out.
 
     useEffect(() => { //Calls the API on page load to retrieve the list of topics the user has already saved.
-      const id = "cfortunato";
+      
       const apiCallSavedTopics = async () => {
           const res = await fetch(`http://localhost:5000/users/`);
           const data = await res.json();
@@ -31,7 +32,30 @@ function App() {
           setSavedTopics(topicsArray);
         };
         apiCallSavedTopics();
-    });
+    }, []);
+    const id = "cfortunato";
+
+    const makePatchRequest = async function() { // Sends the topics chosen by user to the server
+      // Forms request body
+      const body = {
+        "cfortunato": {
+          "savedTopics": [...savedTopics, ...clickedTopics]
+        }
+      };
+
+      const res = await fetch("http://localhost:5000/users", {
+        method: 'PATCH',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      }).then(response => response.json()).then((data)=> { // Grabs the server response and adds the new topics to the savedTopics Array to be displayed.
+        const topicsArray = data[id].savedTopics;
+        setSavedTopics(topicsArray);
+        setClickedTopics([]); // Clears the clicked topics
+      });
+      
+    };
 
 //================================================================== Event handlers =========================================================================================
 
@@ -48,6 +72,11 @@ function App() {
         setClickedTopics(clickedTopics.filter((topic)=> topic !== topicToDelete ));
         
     }
+
+    const handleSaveButtonClick = (): void => {
+      makePatchRequest();
+      console.log("click handled");
+    }
 //=================================================================== JSX ==================================================================================================
     
 
@@ -59,6 +88,7 @@ function App() {
     <div className="App">
       <h1>User Profile</h1>
       <Form topics={topics} handleClick={handleClick} handleDelete={handleTopicButtonsDelete} clickedTopics={clickedTopics}/>
+      <SaveButton handleClick={handleSaveButtonClick}/>
       <SavedTopics topics={savedTopics}/>
     </div>
   );
