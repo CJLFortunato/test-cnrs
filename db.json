@@ -2,7 +2,7 @@
   "topics": ["anthro-bio","anthro-se","archeo","archi","art","class","demo","droit","eco","edu","envir","genre","geo","manag","hisphilso","hist","info","lang","litt","museo","musiq","phil","psy","relig","scipo","socio","stat"],
   "users": {
     "cfortunato": {
-      "topics": ["art", "litt"]
+      "savedTopics": ["art", "litt", "archeo"]
     }
   }
 }

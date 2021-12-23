@@ -42,7 +42,7 @@ export const Form: React.FC = function() {
                 </select>
             </form>
             <div className="clicked-topics-ctn">
-                <p>{clickedTopics.map((topic, index)=> (<button key={index} onClick={handleTopicButtonsDelete} className="topic-btn">{topic}</button>))}</p>
+                {clickedTopics.map((topic, index)=> (<button key={index} onClick={handleTopicButtonsDelete} className="topic-btn">{topic}</button>))}
             </div>
         </div>
     );
