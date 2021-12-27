@@ -17,6 +17,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "sass": "^1.45.1",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
   },
@@ -25,7 +26,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "server": "json-server --watch db.json --port 5000",
+    "sass": "sass --watch App.scss App.css"
   },
   "eslintConfig": {
     "extends": [
