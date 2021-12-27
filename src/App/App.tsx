@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './reset.css';
 import './App.css';
-import { Form } from '../Components/Form/Form';
+import { CatList } from '../Components/CatList/CatList';
 import { SavedTopics } from '../Components/SavedTopics/SavedTopics';
 import { SaveButton } from '../Components/SaveButton/SaveButton';
 
@@ -13,6 +13,7 @@ function App() {
   const [savedTopics, setSavedTopics] = useState<string[]>([]); //stores the topics the user has already saved that are returned by the API call and is mapped to buttons.  
 
   //================================================================ API Calls ===========================================================================================
+// !TO DO!: Try/Catch blocks
 
     useEffect(() => { //Calls the API on page load to retrieve the list of topics the user can choose from.
         const apiCall = async () => {
@@ -79,15 +80,10 @@ function App() {
     }
 //=================================================================== JSX ==================================================================================================
     
-
-    
-
-
-
   return (
     <div className="App">
       <h1>User Profile</h1>
-      <Form topics={topics} handleClick={handleClick} handleDelete={handleTopicButtonsDelete} clickedTopics={clickedTopics}/>
+      <CatList topics={topics} handleClick={handleClick} handleDelete={handleTopicButtonsDelete} clickedTopics={clickedTopics}/>
       <SaveButton handleClick={handleSaveButtonClick}/>
       <SavedTopics topics={savedTopics}/>
     </div>

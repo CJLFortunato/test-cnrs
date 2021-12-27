@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-export const Form = function(props: any) {
+export const CatList = function(props: any) {
     
     return(
         <div className="form-ctn">
