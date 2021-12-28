@@ -135,11 +135,11 @@ h3 {
     color: $color;
     background-color: $bg;
 }
-.active {
+.active { //Topic buttons that have been clicked on
     @include button;
 }
 
-.inactive {
+.inactive { //Topic buttons that haven't been clicked on
     @include button($bg: white, $color: $main-color);
     border: 1px solid $secondary-color;
 }
