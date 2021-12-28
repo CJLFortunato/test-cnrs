@@ -96,6 +96,11 @@ function App() {
     <div className="App">
       <header>
         <p>TRIPLE</p>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Profile</li>
+        </ul>
       </header>
       <main>
         <h1>User Profile</h1>
@@ -104,7 +109,7 @@ function App() {
         <SavedTopics topics={savedTopics}/>
       </main>
       <footer>
-        <p>Page made by Clémence Fortunato. <a href="http://www.cjlfortunato.work/">Portfolio</a> <a href="">GitHub</a></p>
+        <p>Page made by Clémence Fortunato. <a href="http://www.cjlfortunato.work/">Portfolio</a> <a href="https://github.com/CJLFortunato/">GitHub</a></p>
       </footer>
       
       
