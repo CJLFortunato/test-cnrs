@@ -1,7 +1,7 @@
 export const SaveButton = (props: any) => {
     return(
         <div className="save">
-            <button className="btn save-btn" onClick={props.handleClick}>Save</button>
+            <button className="save-btn" onClick={props.handleClick}>Save</button>
         </div>
     );
 }

@@ -1,3 +1,97 @@
+body {
+    background-color: cadetblue;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    p {
+        font-size: 2rem;
+        margin: 10px;
+        margin-left: 1%;
+        padding: 0;
+    }
+}
+
+main {
+    background-color: white;
+    width: 50%;
+    margin: 7% 25%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: fixed;
+    height: 700px;
+
+    
+}
+.cat-list {
+        border: 1px solid green;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 1%;
+        width: 80%;
+
+        h2 {
+            border: 1px solid green;
+            margin: 0 0 1rem 0;
+        }
+
+        .form-ctn {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+
+            form {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                border: 1px solid fuchsia;
+                min-width: 60%;
+    
+                label {
+                    margin: 0 0 1rem 0;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+                select {
+                    width: 40%;
+                    height: 300px;
+                    display: flex;
+                    flex-flow: column wrap;
+                    overflow: visible;
+
+                    option {
+                        font-size: 1.2rem;
+                    }
+                }
+                
+            }
+            .clicked-topics-ctn {
+                border: 1px solid fuchsia;
+                width: 40%;
+            }
+        }
+
+        
+    }
+
+footer {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    p {
+        margin-left: 1%;  
+    }
+}
+
+//==================================================== Buttons ========================================================================================
 @mixin button ($bg: dodgerblue){
     margin: 5px;
     font-size: 1.3rem; 
@@ -7,7 +101,7 @@
     color: white;
     background-color: $bg;
 }
-.btn {
+.active {
     @include button;
 }
 .saved-btn {
@@ -15,4 +109,9 @@
 }
 .save-btn {
     @include button($bg: navy);
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+.inactive {
+    @include button($bg: grey);
 }

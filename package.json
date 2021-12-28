@@ -27,7 +27,7 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 5000",
-    "sass": "sass --watch App.scss App.css"
+    "sass": "sass --watch src/App/App.scss src/App/App.css"
   },
   "eslintConfig": {
     "extends": [
