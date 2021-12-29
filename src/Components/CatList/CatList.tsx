@@ -8,7 +8,7 @@ export const CatList = function(props: any) {
             <h2>Topics</h2>
             <div className="form-ctn">
                     <h3>Select your expertise(s)</h3>
-                    <div className="list">
+                    <div className="list" data-testid="topic-list">
                     {props.topics.map((topic: string, index: number) => {return (<button className="inactive" key={index} onClick={props.handleClick}>{topic}</button>)})}
                     </div>
             </div>

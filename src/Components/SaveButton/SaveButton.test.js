@@ -2,9 +2,6 @@ import { render } from '@testing-library/react';
 import { SaveButton } from './SaveButton';
 import React from "react";
 
-/**
- * @jest-environment jsdom
- */
 
 describe("Save Button", () => {
 
