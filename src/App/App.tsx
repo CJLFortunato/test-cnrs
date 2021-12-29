@@ -6,7 +6,7 @@ import { CatList } from '../Components/CatList/CatList';
 import { SavedTopics } from '../Components/SavedTopics/SavedTopics';
 import { SaveButton } from '../Components/SaveButton/SaveButton';
 
-function App() {
+export function App() {
   
   const [topics, setTopics] = useState<string[]>([]); //stores the topics that are returned by the API call and is mapped as options in a list.
   const [clickedTopics, setClickedTopics] = useState<string[]>([]); //stores the topics that the user clicks on in the list and is mapped to buttons.
