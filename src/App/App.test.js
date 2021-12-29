@@ -11,5 +11,6 @@ describe("the root App component", () => {
 
         expect(app).toBeTruthy();
     });
+    
 
 });

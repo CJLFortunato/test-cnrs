@@ -1,6 +1,7 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { SaveButton } from './SaveButton';
 import React from "react";
+import { act } from "react-dom/test-utils";
 
 
 describe("Save Button", () => {
@@ -10,6 +11,18 @@ describe("Save Button", () => {
         const saveButton = getByText("Save");
 
         expect(saveButton).toBeTruthy();
+    });
+
+    it("calls its onClick event handler", () => {
+        act(() => {
+            const mockClickHandler = jest.fn();
+            const { getByTestId } = render(<SaveButton handleClick={mockClickHandler}/>);
+            const saveButton = getByTestId("save-btn"); 
+
+            fireEvent.click(saveButton);
+            
+            expect(mockClickHandler).toHaveBeenCalled();
+        });
     });
 
 });

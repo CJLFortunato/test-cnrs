@@ -9,7 +9,7 @@ export const CatList = function(props: any) {
             <div className="form-ctn">
                     <h3>Select your expertise(s)</h3>
                     <div className="list" data-testid="topic-list">
-                    {props.topics.map((topic: string, index: number) => {return (<button className="inactive" key={index} onClick={props.handleClick}>{topic}</button>)})}
+                    {props.topics.map((topic: string, index: number) => {return (<button className="inactive" data-testid="topic-btn" key={index} onClick={props.handleClick}>{topic}</button>)})}
                     </div>
             </div>
             

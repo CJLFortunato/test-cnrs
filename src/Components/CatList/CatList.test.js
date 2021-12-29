@@ -1,6 +1,8 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { CatList } from './CatList';
+import { act } from "react-dom/test-utils";
+
 
 describe("the topic list component", () => {
 
@@ -16,4 +18,22 @@ describe("the topic list component", () => {
         expect(catList).toBeTruthy();
     });
 
+    it("renders all the topics returned as buttons", () => {
+        const { getAllByTestId } = render(<CatList topics={mockProps}/>)
+        const topicButtons = getAllByTestId("topic-btn");
+
+        expect(topicButtons).toHaveLength(mockProps.length);
+    });
+
+    it("calls its onClick event handler", () => {
+        act(() => {
+            const mockClickHandler = jest.fn();
+            const { getAllByTestId } = render(<CatList topics={mockProps} handleClick={mockClickHandler}/>)
+            const topicButtons = getAllByTestId("topic-btn"); 
+
+            fireEvent.click(topicButtons[0]);
+            
+            expect(mockClickHandler).toHaveBeenCalled();
+        })
+    });
 });
