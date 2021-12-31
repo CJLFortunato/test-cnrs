@@ -340,7 +340,7 @@ footer p a:active {
     margin-bottom: 0;
   }
 }
-@media screen and (max-height: 960px) {
+@media screen and (max-width: 1023px) and (max-height: 960px) {
   footer {
     position: relative;
     border-top: 1px solid #5EBCD6;
@@ -357,7 +357,7 @@ footer p a:active {
     margin: 0;
   }
 }
-@media screen and (min-width: 1024px) and (min-height: 600px) and (max-height: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1500px) and (min-height: 600px) and (max-height: 1024px) {
   footer {
     position: relative;
     border: none;
