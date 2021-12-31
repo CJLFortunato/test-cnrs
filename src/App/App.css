@@ -40,7 +40,7 @@ header ul li:hover {
 
 main {
   background-color: white;
-  width: 50%;
+  max-width: 50%;
   margin: 7% 25%;
   display: flex;
   flex-flow: column nowrap;
@@ -109,6 +109,7 @@ h3 {
   border-radius: 5px;
   color: white;
   background-color: #5EBCD6;
+  border: 1px solid #5EBCD6;
 }
 
 .inactive {
@@ -178,6 +179,200 @@ footer p a:hover {
 }
 footer p a:active {
   color: #5EBCD6;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    background-image: none;
+    background-color: white;
+  }
+
+  header {
+    border-bottom: 1px solid #5EBCD6;
+    z-index: 10;
+    justify-content: space-evenly;
+  }
+  header p {
+    font-size: 1.5rem;
+  }
+  header ul {
+    width: unset;
+    padding: 0px;
+  }
+  header ul li {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 4rem 0 2rem 0;
+    height: initial;
+    border-radius: 0;
+    position: relative;
+    box-shadow: none;
+  }
+  main .cat-list {
+    width: 98%;
+  }
+  main .list {
+    width: 98%;
+  }
+
+  h1 {
+    border-radius: 0;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  body {
+    background-image: none;
+    background-color: white;
+  }
+
+  header {
+    border-bottom: 1px solid #5EBCD6;
+    z-index: 10;
+    justify-content: space-evenly;
+  }
+  header ul {
+    width: unset;
+  }
+  header ul li {
+    margin: 0 10px;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 4rem 0 2rem 0;
+    height: initial;
+    border-radius: 0;
+    position: relative;
+    box-shadow: none;
+  }
+
+  h1 {
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  body {
+    background-image: none;
+    background-color: white;
+  }
+
+  header {
+    border-bottom: 1px solid #5EBCD6;
+    z-index: 10;
+    justify-content: space-evenly;
+  }
+  header ul {
+    width: unset;
+  }
+  header ul li {
+    margin: 0 10px;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 4rem 0 2rem 0;
+    height: 100%;
+    border-radius: 0;
+    position: relative;
+    box-shadow: none;
+  }
+
+  h1 {
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-size: 300%;
+  }
+
+  header {
+    z-index: 10;
+  }
+
+  main {
+    max-width: 90%;
+    margin: 8rem auto 2rem auto;
+    height: 800px;
+    border-radius: 0;
+    position: relative;
+  }
+
+  h1 {
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+  body {
+    background-size: 300%;
+  }
+
+  header {
+    z-index: 10;
+  }
+
+  main {
+    width: 80%;
+    margin: 6rem auto 2rem auto;
+    min-height: unset;
+    border-radius: 0;
+    position: relative;
+  }
+
+  h1 {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-height: 960px) {
+  footer {
+    position: relative;
+    border-top: 1px solid #5EBCD6;
+  }
+}
+@media screen and (width: 1024px) and (height: 768px) {
+  footer {
+    position: relative;
+    border: none;
+    height: 40px;
+    padding: 10px;
+  }
+  footer p {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) and (max-height: 1024px) {
+  footer {
+    position: relative;
+    border: none;
+    height: 40px;
+    padding: 10px;
+  }
+  footer p {
+    margin: 0;
+  }
+}
+@media screen and (min-height: 1024px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
