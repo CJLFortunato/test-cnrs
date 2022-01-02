@@ -1,3 +1,1 @@
-module.exports = {};
-
-// This file is used to mock stylesheets for Jest testing.
+module.exports = {}; //This mocks CSS files for testing purposes.

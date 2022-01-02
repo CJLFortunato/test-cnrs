@@ -13,12 +13,12 @@
     "envir",
     "genre",
     "geo",
-    "manag",
     "hisphilso",
     "hist",
     "info",
     "lang",
     "litt",
+    "manag",
     "museo",
     "musiq",
     "phil",
@@ -32,9 +32,7 @@
     "cfortunato": {
       "savedTopics": [
         "art",
-        "litt",
-        "geo",
-        "scipo"
+        "litt"
       ]
     }
   }
