@@ -1,7 +1,10 @@
 import React from "react";
 
+interface Props {
+     topics: string[]; handleClick: (e: any) => void; handleDelete: (e: any, topic: string) => void; clickedTopics: string[]; 
+}
 
-export const CatList = function(props: any) {
+export const CatList: React.FC<Props> = function(props) {
 
     const jsx = () => {
         if (props.topics.length > 0) {

@@ -6,7 +6,7 @@ import { CatList } from '../Components/CatList/CatList';
 import { SavedTopics } from '../Components/SavedTopics/SavedTopics';
 import { SaveButton } from '../Components/SaveButton/SaveButton';
 
-export function App() {
+export function App(): JSX.Element {
   
   const [topics, setTopics] = useState<string[]>([]); //stores the topics that are returned by the API call and is mapped as options in a list.
   const [clickedTopics, setClickedTopics] = useState<string[]>([]); //stores the topics that the user clicks on in the list and is mapped to buttons.
@@ -50,7 +50,7 @@ export function App() {
           )
           
           .then(jsonResponse  => {
-              const topicsArray: any = jsonResponse[id].savedTopics;
+              const topicsArray: string[] = jsonResponse[id].savedTopics;
               setSavedTopics(topicsArray);
           })
         };
@@ -60,7 +60,12 @@ export function App() {
 
     const makePatchRequest = async function() { // Sends the topics chosen by user to the server
       // Forms request body
-      const body = {
+      interface BodyInt {
+        "cfortunato": {
+          "savedTopics": string[]
+        }
+      }
+      const body: BodyInt = {
         "cfortunato": {
           "savedTopics": [...savedTopics, ...clickedTopics]
         }
@@ -86,7 +91,7 @@ export function App() {
         })
 
       .then((jsonResponse: any)=> { // Grabs the server response and adds the new topics to the savedTopics Array to be displayed.
-        const topicsArray = jsonResponse[id].savedTopics;
+        const topicsArray: string[] = jsonResponse[id].savedTopics;
         setSavedTopics(topicsArray);
         setClickedTopics([]); // Clears the clicked topics
       });
@@ -110,7 +115,7 @@ export function App() {
     };
 
     const handleTopicButtonsDelete = (e:any, topic: string): void => { // Deletes a topic from the clicked topics array. Takes the emitted event as parameter.
-        setClickedTopics(clickedTopics.filter((clickedTopic)=> clickedTopic !== topic ));
+        setClickedTopics(clickedTopics.filter((clickedTopic: string)=> clickedTopic !== topic ));
     }
 
     const handleSaveButtonClick = (): void => {  //Sends the PATCH request when the user clicks on the "Save" button.

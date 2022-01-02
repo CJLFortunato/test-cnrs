@@ -1,7 +1,11 @@
 import React from "react";
 
 
-export const SavedTopics = (props:any ) => {
+interface Props {
+    topics: string[];
+}
+
+export const SavedTopics: React.FC<Props> = (props ) => {
 
     const jsx = () => {
         if (props.topics.length > 0) {
