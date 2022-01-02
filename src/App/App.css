@@ -101,6 +101,10 @@ h3 {
   margin-top: 10px;
 }
 
+.error-text {
+  color: darkred;
+}
+
 .active {
   margin: 5px;
   font-size: 1.3rem;

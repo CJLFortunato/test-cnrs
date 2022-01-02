@@ -132,6 +132,10 @@ sans-serif;
         margin-top: 10px;
     }
 
+    .error-text {
+        color: darkred;
+    }
+
     //==================================================== Buttons ==============================================================================================================
     @mixin button ($bg: $secondary-color, $color: white) {
         margin: 5px;
