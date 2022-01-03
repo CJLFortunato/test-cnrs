@@ -112,16 +112,6 @@ L'image de fond de la Stadtbibliothek de Stuttgart est de [Max Langelott](https:
 
 
 
-## Captures d'écran
-
-L'application version écran d'ordinateur
-
-![Version ordinateur](src\Screenshot_desktop.png)
-
-L'application version mobile
-
-![Version mobile](src\Screenshot_mobile.png)
-
 
 
 
