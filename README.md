@@ -16,9 +16,7 @@ Clémence Fortunato
     - [Cypress](#cypress)
 * [Lancer le projet](#lancer-le-projet)
 * [Ressources externes](#ressources-externes)
-* [Captures d'écran](#captures-d'-écrans)
 
----
 
 ## Consignes du test
 
@@ -36,7 +34,7 @@ Imaginez une page react permettant de renseigner dans le profil d'un utilisateur
     - PATCH /users/{id}/topics [id est le login de l'utilisateur]
     - attend un json
 
----
+
 
 ## Fonctionnalités
 
@@ -48,7 +46,7 @@ Il suffit de cliquer sur le ou les bouton(s) correspondant à la ou les discipli
 
 Les disciplines que l'utilisateur aura sélectionnées seront retirées de la liste des disciplines disponibles.
 
----
+
 
 ## Technologies
 
@@ -96,7 +94,7 @@ Ce projet utilise Cypress version 9.2.0.
 
 Pour lancer le test end-to-end, tapez `npx cypress open` dans votre terminal.
 
----
+
 
 ## Lancer le projet
 
@@ -106,13 +104,13 @@ Si vous souhaitez inspecter et modifier le CSS, lancez la compilation SASS avec 
 
 Tous les scripts disponibles sont indiqués dans la partie "scripts" du fichier package.json.
 
----
+
 
 ## Ressources externes
 
 L'image de fond de la Stadtbibliothek de Stuttgart est de [Max Langelott](https://unsplash.com/@freiburgermax?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) téléchargée sur [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText). Elle est libre de droits. Plus de détails sur la licence [ici](https://unsplash.com/license).
 
----
+
 
 ## Captures d'écran
 
