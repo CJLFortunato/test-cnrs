@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/prefer-screen-queries */
 import { render } from '@testing-library/react';
 import { SavedTopics } from './SavedTopics';
 import React from "react";
@@ -20,7 +21,5 @@ describe("Saved topics buttons component", () => {
 
         expect(savedButtons).toHaveLength(mockProps.length);
     });
-    
-
 });
 

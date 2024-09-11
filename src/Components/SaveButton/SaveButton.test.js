@@ -1,3 +1,5 @@
+/* eslint-disable testing-library/no-unnecessary-act */
+/* eslint-disable testing-library/prefer-screen-queries */
 import { fireEvent, render } from '@testing-library/react';
 import { SaveButton } from './SaveButton';
 import React from "react";
@@ -17,10 +19,10 @@ describe("Save Button", () => {
         act(() => {
             const mockClickHandler = jest.fn();
             const { getByTestId } = render(<SaveButton handleClick={mockClickHandler}/>);
-            const saveButton = getByTestId("save-btn"); 
+            const saveButton = getByTestId("save-btn");
 
             fireEvent.click(saveButton);
-            
+
             expect(mockClickHandler).toHaveBeenCalled();
         });
     });

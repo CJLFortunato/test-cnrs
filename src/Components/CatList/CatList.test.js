@@ -1,3 +1,5 @@
+/* eslint-disable testing-library/no-unnecessary-act */
+/* eslint-disable testing-library/prefer-screen-queries */
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { CatList } from './CatList';
@@ -29,10 +31,10 @@ describe("the topic list component", () => {
         act(() => {
             const mockClickHandler = jest.fn();
             const { getAllByTestId } = render(<CatList topics={mockProps} handleClick={mockClickHandler}/>)
-            const topicButtons = getAllByTestId("topic-btn"); 
+            const topicButtons = getAllByTestId("topic-btn");
 
             fireEvent.click(topicButtons[0]);
-            
+
             expect(mockClickHandler).toHaveBeenCalled();
         })
     });
